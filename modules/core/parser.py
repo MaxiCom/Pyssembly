@@ -1,3 +1,5 @@
+from modules.global_instructions import *
+
 def	parse_file(filename):
 	buffer = []
 	parsed_array = []
@@ -16,5 +18,5 @@ def	parse_file(filename):
 	for array in buffer:
 		parsed_array.append(filter(None, array))
 
-	print '\033[32mFile parsing ... OK\033[m'
+	display_success_message('File parsing ... OK')
 	return parsed_array
